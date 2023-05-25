@@ -47,8 +47,9 @@ module.exports = {
       colors: {
         mainColor: '#4B4453',
         mainBlack: '#2e2e2e',
-        headingColor: '#B39CD0',
+        headingColor: '#845EC2',
         logoColor: '#B39CD0',
+        headerBgColor: 'rgba(237, 230, 245,0.9)',
         textColor: '#515151',
         cartNumBg: '#e80013',
         primary: '#f5f3f3',
