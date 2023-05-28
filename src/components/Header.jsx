@@ -1,18 +1,21 @@
 import React from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
+import { motion } from 'framer-motion';
 
 import Logo from '../img/logo.png';
 import Avatar from '../img/avatar.png';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const login = () => {};
   return (
     <header className="fixed z-50 w-screen p-4 px-16 shadow-lg bg-headerBgColor">
       {/*desctop and tablet*/}
       <div className="hidden md:flex w-full h-full items-center justify-between ">
-        <div className="flex items-center gap-2 drop-shadow-lg">
+        <Link to={'/'} className="flex items-center gap-2 drop-shadow-lg">
           <img src={Logo} alt="logo" className="w-14 object-cover" />
           <p className="text-mainColor text-lg font-bold">City</p>
-        </div>
+        </Link>
         <div className="flex items-center gap-8">
           <ul className="flex items-center gap-8">
             <li className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
@@ -34,11 +37,15 @@ const Header = () => {
               <p className="text-white text-center text-xs font-semibold">0</p>
             </div>
           </div>
-          <img
-            src={Avatar}
-            alt="avatar"
-            className="w-10 min-w-[40px] h-10  min-h-[40px] rounded-full drop-shadow-md"
-          />
+          <div className="relative">
+            <motion.img
+              whileTap={{ scale: 0.7 }}
+              src={Avatar}
+              alt="avatar"
+              className="w-10 min-w-[40px] h-10  min-h-[40px] rounded-full drop-shadow-md cursor-pointer"
+              onClick={login}
+            />
+          </div>
         </div>
       </div>
       {/*mobile*/}
