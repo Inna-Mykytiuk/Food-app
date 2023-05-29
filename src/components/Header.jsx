@@ -3,7 +3,10 @@ import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { app } from 'firebase.config';
+// import { app } from 'firebase.config';
+import { app } from '../firebase.config';
+import { useStateValue } from 'context/StateProvider';
+import { actionType } from 'context/reducer';
 
 import Logo from '../img/logo.png';
 import Avatar from '../img/avatar.png';
@@ -13,8 +16,17 @@ const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
+  const [{ user }, dispatch] = useStateValue();
+
   const login = async () => {
-    const response = await signInWithPopup(firebaseAuth, provider);
+    const {
+      user: { refreshToken, providerData },
+    } = await signInWithPopup(firebaseAuth, provider);
+    dispatch({
+      type: actionType.SET_USER,
+      user: providerData[0],
+    });
+    localStorage.setItem('user', JSON.stringify(providerData[0]));
   };
   return (
     <header className="fixed z-50 w-screen p-4 px-16 shadow-lg bg-headerBgColor">
@@ -48,7 +60,7 @@ const Header = () => {
           <div className="relative">
             <motion.img
               whileTap={{ scale: 0.7 }}
-              src={Avatar}
+              src={user ? user.photoURL : Avatar}
               alt="avatar"
               className="w-10 min-w-[40px] h-10  min-h-[40px] rounded-full drop-shadow-md cursor-pointer"
               onClick={login}
