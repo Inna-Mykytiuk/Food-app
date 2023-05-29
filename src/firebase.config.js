@@ -1,6 +1,6 @@
 import { getApp, getApps, initializeApp } from 'firebase/app';
-import { getFireStore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage;';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDRKdluX2EoWCQ25nan760dYayP9aMAn_s',
@@ -12,9 +12,9 @@ const firebaseConfig = {
   messagingSenderId: '1095396547734',
   appId: '1:1095396547734:web:588df6a61ed5a71f7076b7',
 };
-
 const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig);
-const firestore = getFireStore(app);
+
+const firestore = getFirestore(app);
 const storage = getStorage(app);
 
 export { app, firestore, storage };
