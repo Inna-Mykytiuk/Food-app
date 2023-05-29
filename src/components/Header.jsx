@@ -2,12 +2,20 @@ import React from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { app } from 'firebase.config';
+
 import Logo from '../img/logo.png';
 import Avatar from '../img/avatar.png';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const login = () => {};
+  const firebaseAuth = getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const login = async () => {
+    const response = await signInWithPopup(firebaseAuth, provider);
+  };
   return (
     <header className="fixed z-50 w-screen p-4 px-16 shadow-lg bg-headerBgColor">
       {/*desctop and tablet*/}
