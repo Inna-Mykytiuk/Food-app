@@ -18,9 +18,11 @@ const Header = () => {
 
   const [{ user }, dispatch] = useStateValue();
 
+  //user: { refreshToken, providerData },
+
   const login = async () => {
     const {
-      user: { refreshToken, providerData },
+      user: { providerData },
     } = await signInWithPopup(firebaseAuth, provider);
     dispatch({
       type: actionType.SET_USER,
