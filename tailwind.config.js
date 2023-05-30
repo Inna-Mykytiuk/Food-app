@@ -46,9 +46,11 @@ module.exports = {
       },
       colors: {
         mainColor: '#4B4453',
+        mainTextColor: '#4B445390',
         mainBlack: '#2e2e2e',
         headingColor: '#845EC2',
         logoColor: '#B39CD0',
+        hoverColor: '#B39CD080',
         headerBgColor: 'rgba(237, 230, 245,0.9)',
         textColor: '#515151',
         cartNumBg: '#e80013',
@@ -57,6 +59,7 @@ module.exports = {
         lighttextGray: '#9ca0ab',
         card: 'rgba(256,256,256,0.8)',
         cartBg: '#282a2c',
+        mainGrey: '#343538',
 
         cartItem: '#2e3033',
         cartTotal: '#343739',

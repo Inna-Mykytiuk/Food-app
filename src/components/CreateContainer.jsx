@@ -3,7 +3,7 @@ import React from 'react';
 const CreateContainer = () => {
   return (
     <div>
-      <p className="text-mainColor">CreateContainer</p>
+      <p className="text-white">CreateContainer</p>
     </div>
   );
 };
