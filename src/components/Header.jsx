@@ -50,7 +50,8 @@ const Header = () => {
 
   return (
     //p-3 px-4 md:p-5 md:px-16
-    <header className="fixed z-50 w-screen p-3 px-4 md:p-5 md:px-16 shadow-lg bg-headerBgColor" style={{ boxShadow: "0 2px 6px 0 grey" }}>
+    //md:p-5 md:px-16
+    <header className="fixed z-50 w-screen p-3 px-10  md:px-16 shadow-lg bg-headerBgColor" style={{ boxShadow: "0 2px 6px 0 grey" }}>
       {/*desctop and tablet*/}
       <div className="hidden md:flex w-full h-full items-center justify-between ">
         <Link to={'/'} className="flex items-center gap-2 drop-shadow-lg">
