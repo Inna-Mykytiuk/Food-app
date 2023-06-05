@@ -47,10 +47,12 @@ module.exports = {
       colors: {
         mainColor: '#4B4453',
         mainTextColor: '#4B445390',
+        mainTextGrey: '#c3c5c9',
         mainBlack: '#2e2e2e',
         headingColor: '#845EC2',
         logoColor: '#B39CD0',
         hoverColor: '#B39CD080',
+        hoverColorShadow: '0 2px 6px 0 grey',
         headerBgColor: 'rgba(237, 230, 245,0.9)',
         textColor: '#515151',
         cartNumBg: '#e80013',
