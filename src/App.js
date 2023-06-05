@@ -10,7 +10,7 @@ const App = () => {
     <AnimatePresence>
       <div className="w-screen h-auto flex flex-col bg-primary">
         <Header />
-        <main className="mt-17 p-6 md:mt-20 w-full bg-mainGrey  ">
+        <main className="mt-17 p-6 px-8 md:mt-20 md:px-16 py-4 w-full bg-mainGrey  ">
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />

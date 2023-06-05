@@ -109,6 +109,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      
       {/*mobile*/}
       <div className="flex md:hidden w-full h-full justify-between items-center">
 
