@@ -1,11 +1,11 @@
 import React from 'react';
 import Delivery from '../img/delivery.png'
-// import HeroBg from '../img/bg1.jpg'
+// import PosterBg from '../img/bg1.jpg'
 
 const HomeContainer = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-2 w-full' id='home'>
-      <div className='py-2 flex-1 flex flex-col items-start justify-center gap-6'>
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-2 w-full' id='home' >
+      <div className='py-12 flex-1 flex flex-col items-start justify-center gap-6'>
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>
         <div className='w-8 h-8 bg-logoColor rounded-full overflow-hidden drop-shadow-md'>
@@ -24,20 +24,27 @@ const HomeContainer = () => {
         onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
         onMouseOut={(e) => (e.target.style.boxShadow = '')}>Order Now</button>
       </div>
-      {/* <div className='py-2 flex-1 overflow-hidden'>
+      <div className='py-2 flex-1 overflow-hidden'>
+          {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
 
-          <img src={HeroBg} alt="hero-Bg" className='rounded-2xl'/>
+      </div>
 
-      </div> */}
-      {/* <div className='py-2 flex-1 overflow-hidden' style={{backgroundImage: 'url(../img/bg1.jpg)', width: '100%', height: '100%'}}>
 
-      </div> */}
-      <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1667927477987-aaa1e46819ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80)'}}>Hello</div>
-      {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: 'url(../img/bg1.jpg)'}}>Hello</div> */}
     </section>
   )
 }
 
 export default HomeContainer
 
+
+//{/* <div className='py-2 flex-1 overflow-hidden'>
+
+// {/* <img src={HeroBg} alt="hero-Bg" className='rounded-2xl'/>
+
+// </div> */}
+// {/* <div className='py-2 flex-1 overflow-hidden' style={{backgroundImage: 'url(../img/bg1.jpg)', width: '100%', height: '100%'}}>
+// </div> */}
+
+// {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${HeroBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}>Hello</div> */}
+// {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${PosterBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}></div> */}
 
