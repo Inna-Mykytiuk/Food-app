@@ -1,5 +1,6 @@
 import React from 'react';
 import Delivery from '../img/delivery.png'
+import HeroBg from '../img/bg1.jpg'
 
 const HomeContainer = () => {
   return (
@@ -23,11 +24,20 @@ const HomeContainer = () => {
         onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
         onMouseOut={(e) => (e.target.style.boxShadow = '')}>Order Now</button>
       </div>
-      <div className='py-2 bg-blue-400 flex-1'></div>
+      {/* <div className='py-2 flex-1 overflow-hidden'>
+
+          <img src={HeroBg} alt="hero-Bg" className='rounded-2xl'/>
+
+      </div> */}
+      {/* <div className='py-2 flex-1 overflow-hidden' style={{backgroundImage: 'url(../img/bg1.jpg)', width: '100%', height: '100%'}}>
+
+      </div> */}
+      <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: 'url(https://plus.unsplash.com/premium_photo-1667927477987-aaa1e46819ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80)'}}>Hello</div>
+      {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: 'url(../img/bg1.jpg)'}}>Hello</div> */}
     </section>
   )
 }
 
 export default HomeContainer
 
-//no coments
+
