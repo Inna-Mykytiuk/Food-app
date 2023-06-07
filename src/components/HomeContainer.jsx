@@ -1,6 +1,7 @@
 import React from 'react';
 import Delivery from '../img/delivery.png'
 // import PosterBg from '../img/bg1.jpg'
+import Ice1 from '../img/i1.png'
 
 const HomeContainer = () => {
   return (
@@ -21,8 +22,27 @@ const HomeContainer = () => {
         onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
         onMouseOut={(e) => (e.target.style.boxShadow = '')}>Order Now</button>
       </div>
-      <div className='py-2 flex-1 overflow-hidden'>
+      <div className='py-2 md:py-12 flex-1 flex items-center relative'>
           {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
+          <div className='ml-auto h-420 md:h-650 bg-white w-full md:w-350 rounded-2xl ' style={{
+          backdropFilter: 'blur(10px)',
+          backgroundColor: 'rgba(90, 72, 72, 0.3)',
+          boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
+        }}>
+
+        </div>
+        <div className='w-full h-full absolute flex top-0 left-0 items-center justify-center px-32 py-4 '>
+          <div className='w-190 p-4 bg-itemBg rounded-md flex flex-col items-center justify-center' style={{
+            backdropFilter: 'blur(10px)',
+            // backgroundColor: 'rgba(90, 72, 72, 0.8)',
+            boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
+          }}>
+            <img src={Ice1} alt="icecreame1" className='w-40 -mt-20 '/>
+            <p className='text-base font-semibold text-white'>Icecreame</p>
+            <p className='text-sm font-semibold text-mainTextGrey'>Chocolate & Vanilla</p>
+          </div>
+        </div>
+
 
       </div>
 
