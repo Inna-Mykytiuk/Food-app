@@ -1,12 +1,14 @@
 import React from 'react';
 import Delivery from '../img/delivery.png'
 // import PosterBg from '../img/bg1.jpg'
-import Ice1 from '../img/i1.png'
+import { heroData } from '../utils/data'
+
+
 
 const HomeContainer = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-2 w-full' id='home' >
-      <div className='py-2 md:py-12 flex-1 flex flex-col items-start justify-center gap-6'>
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 w-full' id='home' >
+      <div className='py-2 md:py-12 flex-1 flex flex-col items-start lg:justify-center gap-6'>
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>
         <div className='w-8 h-8 bg-logoColor rounded-full overflow-hidden drop-shadow-md'>
@@ -24,23 +26,26 @@ const HomeContainer = () => {
       </div>
       <div className='py-2 md:py-12 flex-1 flex items-center relative'>
           {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
-          <div className='ml-auto h-420 md:h-650 bg-white w-full md:w-350 rounded-2xl ' style={{
+          <div className='ml-auto h-420  md:h-650 bg-white w-full md:w-510 rounded-2xl ' style={{
           backdropFilter: 'blur(10px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',
           boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
         }}>
 
         </div>
-        <div className='w-full h-full absolute flex top-0 left-0 items-center justify-center px-32 py-4 '>
-          <div className='w-190 p-4 bg-itemBg rounded-md flex flex-col items-center justify-center' style={{
+        <div className='h-370 lg:h-650 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-0 xlL:px-8 2xl:px-32' >
+          {heroData && heroData.map(n =>(
+            <div key={n.id} className=' lg:w-190 w-170  p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',
             // backgroundColor: 'rgba(90, 72, 72, 0.8)',
             boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
           }}>
-            <img src={Ice1} alt="icecreame1" className='w-40 -mt-20 '/>
-            <p className='text-base font-semibold text-white'>Icecreame</p>
-            <p className='text-sm font-semibold text-mainTextGrey'>Chocolate & Vanilla</p>
+            <img src={n.imageSrc} alt="icecreame1" className='w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]'/>
+            <p className='text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4'>{n.name}</p>
+            <p className='text-[12px] md:text-sm font-semibold text-mainTextGrey my-1 lg:my-4'>{n.description}</p>
+            <p className='text-sm font-semibold text-white'>{n.price}</p>
           </div>
+          ))}
         </div>
 
 
