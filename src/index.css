@@ -22,6 +22,7 @@ html,
 body {
   scroll-behavior: smooth;
   background-color: #343538;
+  overflow-y: hidden;
 }
 
 code {

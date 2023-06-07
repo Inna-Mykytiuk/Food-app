@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, CreateContainer, MainContainer } from 'components';
 import { Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import HeroBg from './img/22.jpg'
+import HeroBg from './img/44.jpg'
 
 const App = () => {
   //initial={false}
@@ -11,7 +11,7 @@ const App = () => {
     <AnimatePresence>
       <div className="w-screen h-auto flex flex-col bg-primary">
         <Header />
-        <main className="mt-17 p-6 px-8 md:mt-20 md:px-16 py-4 w-full h-600 md:h-800 bg-mainGrey justify-center items-center" style={{backgroundImage: `url(${HeroBg}`,backgroundRepeat:"no-repeat", backgroundSize: "cover"}}>
+        <main className="mt-17 p-6 px-8 md:mt-20 md:px-16 py-4 w-full h-600 md:h-800 bg-center bg-mainGrey justify-center items-center" style={{backgroundImage: `url(${HeroBg}`,backgroundRepeat:"no-repeat", backgroundSize: "cover"}}>
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
