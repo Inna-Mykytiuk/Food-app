@@ -1,6 +1,6 @@
 import React from 'react';
 import Delivery from '../img/delivery.png'
-import HeroBg from '../img/bg1.jpg'
+// import HeroBg from '../img/bg1.jpg'
 
 const HomeContainer = () => {
   return (
