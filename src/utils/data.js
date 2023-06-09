@@ -10,3 +10,42 @@ export const heroData = [
   {id:4, name: 'Meat', description:"Meat salad", price:'$ 25.75', imageSrc: Meat1},
   // {id:5, name: 'Salads', description:"Chicken salad", price:'$ 18.75', imageSrc: Meat1},
 ]
+
+export const categories = [
+  {
+    id: 1,
+    name: "Beef & chiken",
+    urlParamName: "meat",
+  },
+  {
+    id: 2,
+    name: "Salads",
+    urlParamName: "salad",
+  },
+  {
+    id: 3,
+    name: "Rice",
+    urlParamName: "rice",
+  },
+  {
+    id: 4,
+    name: "Seafood",
+    urlParamName: "seafood",
+  },
+  {
+    id: 5,
+    name: "Fruits",
+    urlParamName: "fruits",
+  },
+  {
+    id: 6,
+    name: "Icecreams",
+    urlParamName: "icecreams",
+  },
+
+  {
+    id: 7,
+    name: "Soft Drinks",
+    urlParamName: "drinks",
+  },
+];

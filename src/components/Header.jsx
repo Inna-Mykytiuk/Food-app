@@ -19,34 +19,34 @@ const Header = () => {
 
   const [{ user }, dispatch] = useStateValue();
 
-  const [isMenu, setisMenu] = useState(false)
+  const [isMenu, setIsMenu] = useState(false)
 
   //user: { refreshToken, providerData },
 
   const login = async () => {
     if (!user) {
       const {
-        user: { providerData },
+        user: {providerData },
       } = await signInWithPopup(firebaseAuth, provider);
       dispatch({
         type: actionType.SET_USER,
         user: providerData[0],
       });
-      localStorage.setItem('user', JSON.stringify(providerData[0]));
+      localStorage.setItem("user", JSON.stringify(providerData[0]));
     } else {
-      setisMenu(!isMenu);
+      setIsMenu(!isMenu);
     }
   };
 
-  const logout = async () => {
-    setisMenu(false);
-    localStorage.clear()
+  const logout = () => {
+    setIsMenu(false);
+    localStorage.clear();
 
     dispatch({
       type: actionType.SET_USER,
-      user:null
-    })
-  }
+      user: null,
+    });
+  };
 
   return (
     //p-3 px-4 md:p-5 md:px-16
@@ -58,6 +58,7 @@ const Header = () => {
           <img src={Logo} alt="logo" className="w-14 object-cover" />
           <p className="text-mainColor text-lg font-bold">City</p>
         </Link>
+
         <div className="flex items-center gap-8">
           <motion.ul initial={{opacity:0, x:200}}
           animate={{opacity:1, x:0}}
@@ -76,6 +77,7 @@ const Header = () => {
               Service
             </li>
           </motion.ul>
+
           <div className="relative flex items-center justify-center">
             <RiShoppingBasketFill className="text-mainColor text-2xl cursor-pointer" />
             <div className="absolute -top-3 -right-3 flex items-center justify-center w-5 h-5 rounded-full bg-logoColor">
@@ -83,6 +85,7 @@ const Header = () => {
             </div>
           </div>
           <div className="relative">
+
             <motion.img
               whileTap={{ scale: 0.7 }}
               src={user ? user.photoURL : Avatar}
@@ -90,6 +93,7 @@ const Header = () => {
               className="w-10 min-w-[40px] h-10  min-h-[40px] rounded-full drop-shadow-md cursor-pointer"
               onClick={login}
             />
+
             {isMenu && (
               <motion.div initial={{opacity:0, scale:0.6}}
               animate={{opacity:1, scale:1}}
@@ -98,7 +102,7 @@ const Header = () => {
               {
                 user && user.email === 'project.topdoma@gmail.com' && (
                   <Link to={'/createItem'}>
-                  <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base "><MdAdd className='mr-4'/>New Item</p>
+                  <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base" onClick={() => setIsMenu(false)}><MdAdd className='mr-4'/>New Item</p>
                   </Link>
                 )
               }
@@ -142,21 +146,21 @@ const Header = () => {
             {
               user && user.email === 'project.topdoma@gmail.com' && (
                 <Link to={'/createItem'}>
-                <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base justify-center"><MdAdd />New Item</p>
+                <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base justify-center" onClick={() => setIsMenu(false)}><MdAdd />New Item</p>
                 </Link>
               )
             }
             <ul className="flex flex-col">
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor">
+            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Home
             </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor">
+            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Menu
             </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor">
+            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               About us
             </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor">
+            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Service
             </li>
           </ul>
@@ -171,3 +175,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
