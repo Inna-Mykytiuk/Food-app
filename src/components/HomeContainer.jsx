@@ -20,7 +20,7 @@ const HomeContainer = () => {
 
         <p className='text-base text-mainTextGrey text-center md:text-left md:w-[80%]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit praesentium at temporibus mollitia quas qui numquam, adipisci commodi. Laudantium autem vero corporis quae. Impedit tempore quos blanditiis odio ullam error?</p>
 
-        <button type='button' className='md:w-auto sm:w-auto  bg-gradient-to-br from-hoverColor to-logoColor w-full py-2 px-4 rounded-lg text-base text-white hover:shadow-red transition-all ease-in-out duration-300'
+        <button type='button' className='md:w-auto sm:w-auto  bg-gradient-to-br from-hoverColor to-logoColor w-full py-2 px-4 rounded-lg text-base text-white transition-all ease-in-out duration-300'
         onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
         onMouseOut={(e) => (e.target.style.boxShadow = '')}>Order Now</button>
       </div>
