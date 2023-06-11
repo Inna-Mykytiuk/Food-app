@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Header, CreateContainer, MainContainer } from 'components';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import HeroBg from './img/44.jpg';
 import HeroSecondBg from './img/bg-4.jpg';
+import { useStateValue } from 'context/StateProvider';
+import { getAllFoodItems } from 'utils/firebaseFunction';
+import { actionType } from 'context/reducer';
 
 const App = () => {
+  const [{ foodItems }, dispatch] = useStateValue();
+  console.log(foodItems)
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data,
+      });
+    });
+  };
+
+  useEffect(() => {
+    fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const location = useLocation();
 
   let backgroundImage = HeroBg;
