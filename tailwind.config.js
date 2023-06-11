@@ -48,6 +48,8 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
         xlL: '1340px',
+        // xlM: '1588px',
+
         '2xl': '1736px',
       },
       colors: {

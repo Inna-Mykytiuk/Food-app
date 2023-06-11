@@ -33,7 +33,7 @@ const HomeContainer = () => {
         }}>
 
         </div>
-        <div className='h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-32 xlL:px-9 2xl:px-44' >
+        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap xl:px-32 xlL:px-9 2xl:px-44' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' lg:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',
@@ -69,4 +69,6 @@ export default HomeContainer
 
 // {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${HeroBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}>Hello</div> */}
 // {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${PosterBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}></div> */}
+
+//h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-32 xlL:px-9 2xl:px-44
 
