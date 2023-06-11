@@ -8,7 +8,7 @@ import { heroData } from '../utils/data'
 const HomeContainer = () => {
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 w-full min-h-screen h-auto' id='home' >
-      <div className='py-2 md:py-12 flex-1 flex flex-col items-start lg:justify-center gap-6'>
+      <div className='py-2  flex-1 flex flex-col items-start lg:justify-center gap-6'>
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>
         <div className='w-8 h-8 bg-logoColor rounded-full overflow-hidden drop-shadow-md'>
