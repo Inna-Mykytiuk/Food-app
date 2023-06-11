@@ -37,7 +37,7 @@ const HomeContainer = () => {
         <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px]
         3xl:top-[200px]  left-0 items-center justify-center py-2 gap-4 flex-wrap  xlL:px-16 2xl:px-44' >
           {heroData && heroData.map(n =>(
-            <div key={n.id} className=' lg:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
+            <div key={n.id} className=' xl:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',
             // backgroundColor: 'rgba(90, 72, 72, 0.8)',
             boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
