@@ -26,14 +26,15 @@ const HomeContainer = () => {
       </div>
       <div className='py-2 md:py-12 flex-1 flex items-center relative'>
           {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
-          <div className='ml-auto h-420  md:h-600 bg-white w-full md:w-510 rounded-2xl ' style={{
+          <div className='ml-auto h-420  md:h-600 bg-white w-full
+          md:w-510 rounded-2xl ' style={{
           backdropFilter: 'blur(10px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',
           boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
         }}>
 
         </div>
-        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap xl:px-32 xlL:px-9 2xl:px-44' >
+        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap  xlL:px-9 2xl:px-44' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' lg:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',
