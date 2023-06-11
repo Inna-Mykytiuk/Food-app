@@ -12,7 +12,7 @@ const HomeContainer = () => {
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>
         <div className='w-8 h-8 bg-logoColor rounded-full overflow-hidden drop-shadow-md'>
-        <img src={Delivery} className='w-full h-full object-contain bg-white' alt='delivery' />
+        <img src={Delivery} className='w-full h-full object-contain bg-white' alt='delivery' />auto44
         </div>
         </div>
 
@@ -33,7 +33,7 @@ const HomeContainer = () => {
         }}>
 
         </div>
-        <div className='h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-0 xlL:px-9 2xl:px-44' >
+        <div className='h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-32 xlL:px-9 2xl:px-44' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' lg:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',

@@ -48,7 +48,7 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
         xlL: '1340px',
-        '2xl': '1536px',
+        '2xl': '1736px',
       },
       colors: {
         mainColor: '#4B4453',
