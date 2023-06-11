@@ -1,8 +1,18 @@
 import React, {useState} from 'react';
 import { motion } from 'framer-motion';
+import { storage } from 'firebase.config';
+import {
+  deleteObject,
+  getDownloadURL,
+  ref, uploadBytesResumable,
+} from "firebase/storage";
 import { MdFastfood, MdCloudUpload, MdDelete, MdFoodBank, MdAttachMoney } from 'react-icons/md';
 import { categories } from 'utils/data';
 import Loader from "./Loader";
+// import { onSnapshot } from 'firebase/firestore';
+import { getAllFoodItems, saveItem } from 'utils/firebaseFunction';
+import { useStateValue } from 'context/StateProvider';
+import { actionType } from 'context/reducer';
 
 const CreateContainer = () => {
   const [title, setTitle] = useState("");
@@ -14,17 +24,126 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // const [{ foodItems }, dispatch] = useStateValue();
-  console.log(category)
-  console.log(setImageAsset)
-  console.log(setFields)
-  console.log(setAlertStatus)
-  console.log(setMsg)
-  console.log(setIsLoading)
+  const [{ foodItems }, dispatch] = useStateValue();
 
-  const uploadImage =( ) => {}
-  const deleteImage =( ) => {}
-  const saveDetails =( ) => {}
+  console.log(foodItems)
+
+
+  const uploadImage =(e) => {
+    setIsLoading(true);
+    const imageFile = e.target.files[0];
+    // console.log(imageFile)
+    const storageRef = ref(storage, `Images/${Date.now()}-${imageFile.name}`)
+    const uploadTask = uploadBytesResumable(storageRef, imageFile);
+
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const uploadProgress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log(uploadProgress)
+      },
+      (error) => {
+        console.log(error);
+        setFields(true);
+        setMsg("Error while uploading : Try AGain 🙇");
+        setAlertStatus("danger");
+        setTimeout(() => {
+          setFields(false);
+          setIsLoading(false);
+        }, 4000);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImageAsset(downloadURL);
+          setIsLoading(false);
+          setFields(true);
+          setMsg("Image uploaded successfully 😊");
+          setAlertStatus("success");
+          setTimeout(() => {
+            setFields(false);
+          }, 4000);
+        });
+      }
+    );
+  };
+
+  const deleteImage = () => {
+    setIsLoading(true);
+    const deleteRef = ref(storage, imageAsset);
+    deleteObject(deleteRef).then(() => {
+      setImageAsset(null);
+      setIsLoading(false);
+      setFields(true);
+      setMsg("Image deleted successfully 😊");
+      setAlertStatus("success");
+      setTimeout(() => {
+        setFields(false);
+      }, 4000);
+    });
+  };
+
+  const saveDetails = () => {
+    setIsLoading(true);
+    try {
+      if (!title || !calories || !imageAsset || !price || !category) {
+        setFields(true);
+        setMsg("Required fields can't be empty");
+        setAlertStatus("danger");
+        setTimeout(() => {
+          setFields(false);
+          setIsLoading(false);
+        }, 4000);
+      } else {
+        const data = {
+          id: `${Date.now()}`,
+          title: title,
+          imageURL: imageAsset,
+          category: category,
+          calories: calories,
+          qty: 1,
+          price: price,
+        };
+        saveItem(data);
+        setIsLoading(false);
+        setFields(true);
+        setMsg("Data Uploaded successfully 😊");
+        setAlertStatus("success");
+        setTimeout(() => {
+          setFields(false);
+        }, 4000);
+        clearData();
+      }
+    } catch (error) {
+      console.log(error);
+      setFields(true);
+      setMsg("Error while uploading : Try AGain 🙇");
+      setAlertStatus("danger");
+      setTimeout(() => {
+        setFields(false);
+        setIsLoading(false);
+      }, 4000);
+    }
+
+    fetchData();
+  };
+
+  const clearData = () => {
+    setTitle("");
+    setImageAsset(null);
+    setCalories("");
+    setPrice("");
+    setCategory("Select Category");
+  };
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data,
+      });
+    });
+  };
 
 
   return (
@@ -43,7 +162,7 @@ const CreateContainer = () => {
         exit={{opacity: 0}}
         className={`w-full p-2 rounded-lg text-center text-lg font-semibold ${alertStatus === "danger"
         ? "bg-red-400 text-white"
-        : "bg-emerald-400 text-emerald-800"}`}>
+        : "bg-logoColor text-white"}`}>
           {msg}
         </motion.p>
       )}
@@ -107,9 +226,9 @@ const CreateContainer = () => {
               <img src={imageAsset} alt="uploadedImage" className='w-full h-full objest-cover'/>
               <button type='button' className='absolute bottom-3 right-3
               text-xl cursor-pointer outline-none hover:shadov-md duration-500 transition-all ease-in-out
-              bg-gradient-to-br from-hoverColor to-logoColor py-2 px-4 rounded-lg text-white'
-              onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
-              onMouseOut={(e) => (e.target.style.boxShadow = '')}
+              bg-gradient-to-br from-hoverColor to-logoColor py-2 px-4 rounded-full text-white'
+              // onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
+              // onMouseOut={(e) => (e.target.style.boxShadow = '')}
               onClick={deleteImage}>
                 <MdDelete className='text-white'/>
               </button>
