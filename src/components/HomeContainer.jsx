@@ -34,8 +34,11 @@ const HomeContainer = () => {
         }}>
 
         </div>
-        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[130px]  xlM:top-[130px]
-        3xl:top-[200px]  left-0 items-center justify-center py-2 gap-4 flex-wrap  xlL:px-16 2xl:px-44' >
+        <div className=' h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
+        md:top-[250px]
+        lg:px-4
+        2xl:px-44
+        py-2 gap-4 flex-wrap  ' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' xl:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
             backdropFilter: 'blur(10px)',
