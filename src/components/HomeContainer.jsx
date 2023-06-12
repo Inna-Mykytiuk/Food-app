@@ -12,7 +12,7 @@ const HomeContainer = () => {
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>
         <div className='w-8 h-8 bg-logoColor rounded-full overflow-hidden drop-shadow-md'>
-        <img src={Delivery} className='w-full h-full object-contain bg-white' alt='delivery' />auto44
+        <img src={Delivery} className='w-full h-full object-contain bg-white' alt='delivery' />
         </div>
         </div>
 
@@ -24,7 +24,7 @@ const HomeContainer = () => {
         onMouseOver={(e) => (e.target.style.boxShadow = '0 2px 6px 0 grey')}
         onMouseOut={(e) => (e.target.style.boxShadow = '')}>Order Now</button>
       </div>
-      <div className='py-2 md:py-12 flex-1 flex items-center relative'>
+      <div className='py-2 md:py-12 flex-1 flex items-center lg:justify-center relative'>
           {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
           <div className='ml-auto h-420  md:h-600 bg-white w-full
           md:w-510 rounded-2xl ' style={{
@@ -34,7 +34,7 @@ const HomeContainer = () => {
         }}>
 
         </div>
-        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px]
+        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[100px]  xlM:top-[150px]
         3xl:top-[200px]  left-0 items-center justify-center py-2 gap-4 flex-wrap  xlL:px-16 2xl:px-44' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' xl:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
