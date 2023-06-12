@@ -34,7 +34,7 @@ const HomeContainer = () => {
         }}>
 
         </div>
-        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[150px]  xlM:top-[150px]
+        <div className=' h-370 lg:h-600 absolute flex top-4  md:top-[130px]  xlM:top-[130px]
         3xl:top-[200px]  left-0 items-center justify-center py-2 gap-4 flex-wrap  xlL:px-16 2xl:px-44' >
           {heroData && heroData.map(n =>(
             <div key={n.id} className=' xl:w-190 w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
@@ -44,7 +44,7 @@ const HomeContainer = () => {
           }}>
             <img src={n.imageSrc} alt="icecreame1" className='w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]'/>
             <p className='text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4'>{n.name}</p>
-            <p className='text-[12px] md:text-sm font-semibold text-mainTextGrey my-1 lg:my-4'>{n.description}</p>
+            <p className='text-[12px] md:text-sm  text-mainTextGrey my-1 lg:my-4'>{n.description}</p>
             <p className='text-sm font-semibold text-white'>{n.price}</p>
           </div>
           ))}
