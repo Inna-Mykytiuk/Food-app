@@ -9,8 +9,8 @@ import { getAllFoodItems } from 'utils/firebaseFunction';
 import { actionType } from 'context/reducer';
 
 const App = () => {
+  // eslint-disable-next-line no-unused-vars
   const [{ foodItems }, dispatch] = useStateValue();
-  console.log(foodItems)
 
   const fetchData = async () => {
     await getAllFoodItems().then((data) => {
