@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Food-app/static/css/main.79cde72c.css",
-    "main.js": "/Food-app/static/js/main.758be50d.js",
+    "main.css": "/Food-app/static/css/main.fb029b29.css",
+    "main.js": "/Food-app/static/js/main.5fe50840.js",
     "static/media/bg-4.jpg": "/Food-app/static/media/bg-4.dc079cd787ef11b2cc52.jpg",
     "static/media/fi2.png": "/Food-app/static/media/fi2.509dcaee7c84a7c97bc9.png",
     "static/media/44.jpg": "/Food-app/static/media/44.c923911982f0e404c0f7.jpg",
@@ -12,11 +12,11 @@
     "static/media/avatar.png": "/Food-app/static/media/avatar.f63efaefad40e3b2c32c.png",
     "static/media/logo.png": "/Food-app/static/media/logo.4e2019af285b2c262273.png",
     "index.html": "/Food-app/index.html",
-    "main.79cde72c.css.map": "/Food-app/static/css/main.79cde72c.css.map",
-    "main.758be50d.js.map": "/Food-app/static/js/main.758be50d.js.map"
+    "main.fb029b29.css.map": "/Food-app/static/css/main.fb029b29.css.map",
+    "main.5fe50840.js.map": "/Food-app/static/js/main.5fe50840.js.map"
   },
   "entrypoints": [
-    "static/css/main.79cde72c.css",
-    "static/js/main.758be50d.js"
+    "static/css/main.fb029b29.css",
+    "static/js/main.5fe50840.js"
   ]
 }
