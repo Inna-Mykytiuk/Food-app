@@ -152,20 +152,20 @@ const Header = () => {
                 </Link>
               )
             }
-            <ul className="flex flex-col">
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
+            <div className="flex flex-col">
+            <Link to={'/'} className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Home
-            </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
+            </Link>
+            {/* <Link to={'/'} className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Menu
-            </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
+            </Link> */}
+            <Link to={'/aboutUs'} className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               About us
-            </li>
-            <li className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
+            </Link>
+            <Link to={'/'} className="text-base text-mainColor px-4 py-2 hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor" onClick={() => setIsMenu(false)}>
               Service
-            </li>
-          </ul>
+            </Link>
+          </div>
             <p className="text-mainTextColor rounded-md shadow-md m-2 p-2 flex items-center justify-center bg-gray-200 cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base"
             onClick={logout}><MdLogout/> Log out</p>
           </motion.div>
