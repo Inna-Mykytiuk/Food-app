@@ -50,4 +50,4 @@ const MainContainer = () => {
 };
 
 export default MainContainer;
-//className="bg-mainGrey"
+//className="bg-mainGray"

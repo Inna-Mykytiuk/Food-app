@@ -21,7 +21,8 @@ body {
 html,
 body {
   scroll-behavior: smooth;
-  background-color: #343538;
+  /* background-color: #343538; */
+  background-color: #232425;
   /* overflow-y: hidden; */
 }
 

@@ -25,6 +25,7 @@ module.exports = {
         80: '80px',
         150: '150px',
         225: '225px',
+        250: '250px',
         300: '300px',
         340: '340px',
         370: '370px',
@@ -75,7 +76,8 @@ module.exports = {
         lighttextGray: '#9ca0ab',
         card: 'rgba(256,256,256,0.8)',
         cartBg: '#282a2c',
-        mainGrey: '#343538',
+        // mainGray: '#343538',
+        mainGray: '#232425',
         mainWhite: '#ffffff',
 
         cartItem: '#2e3033',

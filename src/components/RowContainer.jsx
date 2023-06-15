@@ -17,7 +17,7 @@ rowContainer.current.scrollLeft += scrollValue
   return (
     <div
     ref={rowContainer}
-    className={`w-full flex items-center gap-4 my-12 scroll-smooth  ${
+    className={`w-full flex items-center gap-4 my-12 scroll-smooth ${
       flag
       ? 'overflow-x-scroll scrollbar-none'
       : 'overflow-x-hidden flex-wrap'
@@ -27,10 +27,10 @@ rowContainer.current.scrollLeft += scrollValue
     {data && data.map(item => (
       <div
       key={item.id}
-      className='min-w-[250px] w-300 h-[220px] md:w-340 md:min-w-[300px] backdrop-blur-lg my-12 border-none rounded-lg px-4 cursor-pointer flex flex-col items-center justify-between'
+      className='min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-lg my-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg'
           style={{ color: 'white',
           backdropFilter: 'blur(5px)',
-          backgroundColor: 'rgba(90, 72, 72, 0.3)',
+          // backgroundColor: 'rgba(90, 72, 72, 0.3)',
           boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px' }}
 
           >
@@ -40,7 +40,7 @@ rowContainer.current.scrollLeft += scrollValue
         whileTap={{scale: 1.2}}
         src={item?.imageURL}
         alt="image"
-        className='w-30 h-[140px] -mt-8'
+        className='w-30 h-[140px] -mt-12'
         />
         <motion.div
         whileTap={{scale: 0.75}}
