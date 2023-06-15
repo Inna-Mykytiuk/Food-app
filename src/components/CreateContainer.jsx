@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion';
 import { storage } from 'firebase.config';
 import {
@@ -29,6 +29,16 @@ const CreateContainer = () => {
   const [{ foodItems }, dispatch] = useStateValue();
 
   console.log(foodItems)
+
+  useEffect(() => {
+    // Set overflow to hidden when the component mounts
+    document.body.style.overflow = 'hidden';
+
+    // Cleanup: set overflow back to default when the component unmounts
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, []);
 
 
   const uploadImage =(e) => {
@@ -149,7 +159,7 @@ const CreateContainer = () => {
 
 
   return (
-    <div className='w-full min-h-screen h-auto flex items-center justify-center mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4'
+    <div className='w-full min-h-screen h-auto flex items-center justify-center mt-17 p-6 px-10 md:mt-[30px] md:px-16 lg:px-20 py-4'
     style={{
             width: '100%',
             backgroundImage: `url(${HeroBg})`,

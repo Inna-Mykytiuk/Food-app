@@ -1,10 +1,9 @@
-import React,  { useEffect, useRef, useState } from 'react';
+import React,  { useEffect, useRef } from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import NotFound from "../img/NotFound.svg";
 // import { useStateValue } from 'context/StateProvider';
 // import { actionType } from 'context/reducer';
-
 
 
 const RowContainer = ({flag, data, scrollValue}) => {
@@ -14,7 +13,7 @@ const RowContainer = ({flag, data, scrollValue}) => {
 rowContainer.current.scrollLeft += scrollValue
   }, [scrollValue])
 
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
   const rowContainer = useRef();
 
   return (
@@ -32,7 +31,7 @@ rowContainer.current.scrollLeft += scrollValue
       data.map(item => (
       <div
       key={item?.id}
-      className='min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-16 mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg'>
+      className='min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-8 lg:mt-16 mb-4 lg:mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg'>
       <div
         className='w-full flex items-center justify-between '>
         <motion.img
@@ -43,11 +42,12 @@ rowContainer.current.scrollLeft += scrollValue
         />
         <motion.div
         whileTap={{scale: 0.75}}
-        className='w-8 h-8 rounded-full bg-mainColor flex items-center justify-center hover:bg-logoColor hover:text-white transition-all ease-in-out duration-100 cursor-pointer'
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
+        className='w-8 h-8 group rounded-full bg-logoColor flex items-center justify-center cursor-pointer'
+        // onMouseEnter={() => setIsHovered(true)}
+        // onMouseLeave={() => setIsHovered(false)}
+        >
         <RiShoppingBasketFill
-        className={`text-2xl  transition-all ease-in-out duration-100 ${isHovered ? 'text-white' : 'text-mainTextGrey'}`}
+        className={`text-2xl text-white `}
       />
         </motion.div>
       </div>

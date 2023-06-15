@@ -13,7 +13,6 @@ const MenuContainer = () => {
   const [{ foodItems }, dispatch] = useStateValue();
 
 
-
   return (
     <section className='w-full my-6 mt-17 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4 drop-shadow-xl'>
       <div className='flex flex-col items-center justify-center'>

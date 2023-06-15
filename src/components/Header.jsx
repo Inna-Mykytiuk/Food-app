@@ -36,6 +36,7 @@ const Header = () => {
       localStorage.setItem("user", JSON.stringify(providerData[0]));
     } else {
       setIsMenu(!isMenu);
+
     }
   };
 
@@ -61,23 +62,23 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-8">
-          <motion.ul initial={{opacity:0, x:200}}
+          <motion.div initial={{opacity:0, x:200}}
           animate={{opacity:1, x:0}}
           exit={{opacity:0, x:200}}
           className="flex items-center gap-8">
-            <li className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            <Link to={'/'} className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Home
-            </li>
-            <li className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            </Link>
+            {/* <Link to={'/'} className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Menu
-            </li>
-            <li className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            </Link> */}
+            <Link to={'/aboutUs'} className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               About us
-            </li>
-            <li className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+            </Link>
+            <Link to={'/'} className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Service
-            </li>
-          </motion.ul>
+            </Link>
+          </motion.div>
 
           <div className="relative flex items-center justify-center">
             <RiShoppingBasketFill className="text-mainColor text-2xl cursor-pointer" />
