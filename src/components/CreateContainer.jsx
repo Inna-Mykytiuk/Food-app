@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 import { storage } from 'firebase.config';
 import {
@@ -30,15 +30,15 @@ const CreateContainer = () => {
 
   console.log(foodItems)
 
-  useEffect(() => {
-    // Set overflow to hidden when the component mounts
-    document.body.style.overflow = 'hidden';
+  // useEffect(() => {
+  //   // Set overflow to hidden when the component mounts
+  //   document.body.style.overflow = 'hidden';
 
-    // Cleanup: set overflow back to default when the component unmounts
-    return () => {
-      document.body.style.overflow = 'visible';
-    };
-  }, []);
+  //   // Cleanup: set overflow back to default when the component unmounts
+  //   return () => {
+  //     document.body.style.overflow = 'visible';
+  //   };
+  // }, []);
 
 
   const uploadImage =(e) => {
