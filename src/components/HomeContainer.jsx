@@ -3,11 +3,19 @@ import Delivery from '../img/delivery.png'
 // import PosterBg from '../img/bg1.jpg'
 import { heroData } from '../utils/data'
 
+import HeroBg from '../img/44.jpg';
+
 
 
 const HomeContainer = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto' id='home' >
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4' id='home'
+    style={{
+            // width: '100%',
+            backgroundImage: `url(${HeroBg})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+          }}>
       <div className='py-2 flex-1 flex flex-col items-start justify-center gap-6'>
         <div className='flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full'>
         <p className='text-white text-center text-base font-semibold'>Bike Delivery</p>

@@ -2,13 +2,18 @@ import React, {useState} from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 
-const RowContainer = ({flag}) => {
+const RowContainer = ({flag,data}) => {
+  console.log(data)
+
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className={`w-full my-12   ${flag ? 'overflow-x-scroll' : 'overflow-x-hidden'}`}
     >
 
-    <div className='w-300 md:w-340 h-auto backdrop-blur-lg my-12 border-none rounded-3xl p-2 cursor-pointer'
+    {data && data.map(item => (
+      <div key={item.id}
+      className='w-300 md:w-340 h-auto backdrop-blur-lg my-12 border-none rounded-3xl p-2 cursor-pointer'
           style={{ color: 'white',
           backdropFilter: 'blur(5px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',
@@ -46,6 +51,7 @@ const RowContainer = ({flag}) => {
         </div>
       </div>
     </div>
+    ))}
 
     </div>
   )
