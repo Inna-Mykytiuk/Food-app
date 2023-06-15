@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import HomeContainer from './HomeContainer';
 import { motion } from 'framer-motion';
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
@@ -22,7 +22,7 @@ const MainContainer = () => {
 
     <section className='w-full mt-17 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4'>
       <div className='w-full flex items-center justify-between'>
-        <p className='text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100'>Our fresh & healthy fruits
+        <p className='text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100'>Our fresh & <span className="text-logoColor">healthy fruits</span>
         </p>
 
         <div className='hidden md:flex gap-3 items-center'>

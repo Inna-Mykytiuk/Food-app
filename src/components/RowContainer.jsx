@@ -27,7 +27,7 @@ rowContainer.current.scrollLeft += scrollValue
     {data && data.map(item => (
       <div
       key={item.id}
-      className='min-w-[250px] w-300 h-[220px] md:w-340 md:min-w-[300px] backdrop-blur-lg my-12 border-none rounded-3xl px-4 cursor-pointer'
+      className='min-w-[250px] w-300 h-[220px] md:w-340 md:min-w-[300px] backdrop-blur-lg my-12 border-none rounded-lg px-4 cursor-pointer flex flex-col items-center justify-between'
           style={{ color: 'white',
           backdropFilter: 'blur(5px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',
