@@ -1,19 +1,33 @@
-import React, {useState} from 'react';
+import React,  { useEffect, useRef, useState } from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
+// import { useStateValue } from 'context/StateProvider';
+// import { actionType } from 'context/reducer';
 
-const RowContainer = ({flag,data}) => {
+const RowContainer = ({flag, data, scrollValue}) => {
   console.log(data)
 
+  useEffect(() => {
+rowContainer.current.scrollLeft += scrollValue
+  }, [scrollValue])
+
   const [isHovered, setIsHovered] = useState(false);
+  const rowContainer = useRef();
 
   return (
-    <div className={`w-full my-12   ${flag ? 'overflow-x-scroll' : 'overflow-x-hidden'}`}
+    <div
+    ref={rowContainer}
+    className={`w-full flex items-center gap-4 my-12 scroll-smooth  ${
+      flag
+      ? 'overflow-x-scroll scrollbar-none'
+      : 'overflow-x-hidden flex-wrap'
+      }`}
     >
 
     {data && data.map(item => (
-      <div key={item.id}
-      className='w-300 md:w-340 h-auto backdrop-blur-lg my-12 border-none rounded-3xl p-2 cursor-pointer'
+      <div
+      key={item.id}
+      className='min-w-[250px] w-300 h-[220px] md:w-340 md:min-w-[300px] backdrop-blur-lg my-12 border-none rounded-3xl px-4 cursor-pointer'
           style={{ color: 'white',
           backdropFilter: 'blur(5px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',
@@ -24,9 +38,9 @@ const RowContainer = ({flag,data}) => {
         className='w-full flex items-center justify-between '>
         <motion.img
         whileTap={{scale: 1.2}}
-        src="https://firebasestorage.googleapis.com/v0/b/foodapp-b4f5f.appspot.com/o/Images%2F1686771923791-f10.png?alt=media&token=5dc0e0f6-e00f-4af4-817f-d39ba2d2183d"
-        alt=""
-          className='w-40 -mt-8'
+        src={item?.imageURL}
+        alt="image"
+        className='w-30 h-[140px] -mt-8'
         />
         <motion.div
         whileTap={{scale: 0.75}}
@@ -41,12 +55,12 @@ const RowContainer = ({flag,data}) => {
 
       <div className='w-full flex flex-col gap-2 items-end justify-end'>
         <p className='text-white font-semibold text-base md:text-lg'>
-          Watermelon
+        {item?.title}
         </p>
-        <p className='mt-1 text-mainTextGrey text-sm'>45 Calories</p>
+        <p className='mt-1 text-mainTextGrey text-sm'>{item?.calories} Calories</p>
         <div className='flex items-center gap-8'>
           <p className='text-lg text-white font-semibold'>
-          <span className='text-sm text-white'>$</span> 4.80
+          <span className='text-sm text-white'>$</span> {item?.price}
           </p>
         </div>
       </div>

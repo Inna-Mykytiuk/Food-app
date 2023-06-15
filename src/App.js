@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { Header, CreateContainer, MainContainer } from 'components';
-import { Route, Routes, useLocation } from 'react-router-dom';
+// import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 // import HeroBg from './img/44.jpg';
 // import HeroSecondBg from './img/bg-4.jpg';
