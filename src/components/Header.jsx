@@ -103,11 +103,11 @@ const Header = () => {
               {
                 user && user.email === 'project.topdoma@gmail.com' && (
                   <Link to={'/createItem'}>
-                  <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base" onClick={() => setIsMenu(false)}><MdAdd className='mr-4'/>New Item</p>
+                  <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base" onClick={() => setIsMenu(false)}><MdAdd className='mr-4'/>New Item</p>
                   </Link>
                 )
               }
-              <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base "
+              <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base "
               onClick={logout}><MdLogout className='mr-4'/> Log out</p>
             </motion.div>
             )}
@@ -147,7 +147,7 @@ const Header = () => {
             {
               user && user.email === 'project.topdoma@gmail.com' && (
                 <Link to={'/createItem'}>
-                <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base justify-center" onClick={() => setIsMenu(false)}><MdAdd />New Item</p>
+                <p className="text-mainTextColor px-4 py-2 flex items-center cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base justify-center" onClick={() => setIsMenu(false)}><MdAdd />New Item</p>
                 </Link>
               )
             }
@@ -165,7 +165,7 @@ const Header = () => {
               Service
             </li>
           </ul>
-            <p className="text-mainTextColor rounded-md shadow-md m-2 p-2 flex items-center justify-center bg-gray-200 cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 easy-in-out text-base"
+            <p className="text-mainTextColor rounded-md shadow-md m-2 p-2 flex items-center justify-center bg-gray-200 cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base"
             onClick={logout}><MdLogout/> Log out</p>
           </motion.div>
           )}

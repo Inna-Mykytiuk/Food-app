@@ -9,7 +9,7 @@ import HeroBg from '../img/44.jpg';
 
 const HomeContainer = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4' id='home'
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4 drop-shadow-xl' id='home'
     style={{
             // width: '100%',
             backgroundImage: `url(${HeroBg})`,

@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useStateValue } from 'context/StateProvider';
 import RowContainer from "./RowContainer";
+import MenuContainer from "./MenuContainer";
 
-
+import HeroBg from '../img/rw4.png';
 
 
 const MainContainer = () => {
@@ -16,26 +17,37 @@ const MainContainer = () => {
   useEffect(() => {}, [scrollValue, cartShow]);
 
   return (
-    <div className='w-full h-auto flex flex-col items-center justify-center '
+    <div className='w-full h-auto flex flex-col items-center justify-center
+    '
+
     >
     <HomeContainer/>
 
-    <section className='w-full mt-17 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4'>
+    <section className='w-full mt-17 p-6 px-10 mt-12  md:px-16 lg:px-20 py-4 relative
+    before:w-full before:h-[1px] before:left-0 before:top-0 before:bg-mainTextGrey before:content before:absolute
+    after:w-full after:h-[1px] after:left-0 after:bottom-0 after:bg-mainTextGrey after:content after:absolute
+    '
+    style={{
+            backgroundImage: `url(${HeroBg})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+          }}
+          >
       <div className='w-full flex items-center justify-between'>
-        <p className='text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100'>Our fresh & <span className="text-logoColor">healthy fruits</span>
+        <p className='text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100'>Our fresh & <span className="text-logoColor ">healthy fruits</span>
         </p>
 
         <div className='hidden md:flex gap-3 items-center'>
           <motion.div
           whileTap={{scale: 0.75}}
           className='w-8 h-8 rounded-lg bg-purple-300 hover:bg-logoColor hover:shadow-lg flex cursor-pointer items-center justify-center transition-all ease-in-out duration-100'
-          onClick={() => setScrollValue(-200)}>
+          onClick={() => setScrollValue(-800)}>
           <MdChevronLeft className="text-lg text-white" />
           </motion.div>
           <motion.div
           whileTap={{scale: 0.75}}
-          className='w-8 h-8 rounded-lg bg-purple-300 hover:bg-logoColor hover:shadow-lg flex cursor-pointer items-center justify-center transition-all ease-in-out duration-100'
-          onClick={() => setScrollValue(200)}>
+          className='w-8 h-8 rounded-lg bg-purple-300 hover:bg-logoColor hover:shadow-lg flex cursor-pointer items-center justify-center '
+          onClick={() => setScrollValue(800)}>
           <MdChevronRight className="text-lg text-white" />
           </motion.div>
         </div>
@@ -45,9 +57,12 @@ const MainContainer = () => {
       flag={true}
       data={foodItems?.filter(n => n.category === 'fruits')}/>
     </section>
+
+    <MenuContainer/>
     </div>
   );
 };
 
 export default MainContainer;
 //className="bg-mainGray"
+

@@ -14,7 +14,7 @@ export const heroData = [
 export const categories = [
   {
     id: 1,
-    name: "Beef & chiken",
+    name: "Beef & chicken",
     urlParamName: "meat",
   },
   {
@@ -24,7 +24,7 @@ export const categories = [
   },
   {
     id: 3,
-    name: "Rice and soups",
+    name: "Rice & soups",
     urlParamName: "rice",
   },
   {
@@ -47,5 +47,10 @@ export const categories = [
     id: 7,
     name: "Soft Drinks",
     urlParamName: "drinks",
+  },
+  {
+    id: 8,
+    name: "Strong Drinks",
+    urlParamName: "Alcohol drinks",
   },
 ];

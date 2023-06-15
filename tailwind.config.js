@@ -76,8 +76,8 @@ module.exports = {
         lighttextGray: '#9ca0ab',
         card: 'rgba(256,256,256,0.8)',
         cartBg: '#282a2c',
-        // mainGray: '#343538',
-        mainGray: '#232425',
+        cardGray: '#343538',
+        mainGray: '#181716',
         mainWhite: '#ffffff',
 
         cartItem: '#2e3033',
