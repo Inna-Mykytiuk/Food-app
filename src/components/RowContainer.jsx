@@ -31,7 +31,7 @@ rowContainer.current.scrollLeft += scrollValue
       data.map(item => (
       <div
       key={item?.id}
-      className='min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-8 lg:mt-16 mb-4 lg:mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg'>
+      className='min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-8 lg:mt-10 mb-4 lg:mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg'>
       <div
         className='w-full flex items-center justify-between '>
         <motion.img
@@ -56,7 +56,7 @@ rowContainer.current.scrollLeft += scrollValue
         <p className='text-white font-semibold text-base md:text-lg'>
         {item?.title}
         </p>
-        <p className='mt-1 text-mainTextGrey text-sm'>{item?.calories} Calories</p>
+        <p className='mt-1 text-black text-sm'>{item?.calories} Calories</p>
         <div className='flex items-center gap-8'>
           <p className='text-lg text-white font-semibold'>
           <span className='text-sm text-white'>$</span> {item?.price}
@@ -65,7 +65,7 @@ rowContainer.current.scrollLeft += scrollValue
       </div>
     </div>
     )) : (
-      <div className='w-full flex flex-col mt-12 items-center justify-center'>
+      <div className='w-full flex flex-col mb-12 items-center justify-center'>
       <p className='text-white text-xl font-semibold my-10'>Items Not Available</p>
       <img src={NotFound} alt="notFound" className='h-340'/>
       </div>

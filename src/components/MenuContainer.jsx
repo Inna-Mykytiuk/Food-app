@@ -5,6 +5,7 @@ import {IoFastFood} from 'react-icons/io5'
 import { categories } from "utils/data";
 import { motion } from "framer-motion";
 import RowContainer from "./RowContainer";
+import HeroBg from '../img/w5.jpg';
 
 const MenuContainer = () => {
   const [filter, setFilter] = useState("meat");
@@ -14,7 +15,16 @@ const MenuContainer = () => {
 
 
   return (
-    <section className='w-full my-6 mt-17 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4 drop-shadow-xl'>
+    <section className='w-full my-6 mb-0 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4 drop-shadow-xl'
+    style={{
+            // width: '100%',
+            backgroundImage: `url(${HeroBg})`,
+            backgroundRepeat: 'no-repeat',
+            // backgroundPosition: 'bottom',
+            // backgroundSize: '100%'
+            backgroundSize: 'cover'
+
+          }}>
       <div className='flex flex-col items-center justify-center'>
         <p className='text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100 mr-auto'>Our Hot <span className="text-logoColor">Dishes</span>
         </p>

@@ -32,7 +32,7 @@ const App = () => {
       <div className="w-screen h-auto flex flex-col bg-primary">
         <Header />
         <main
-          className="w-full h-full bg-center bg-mainGray justify-center items-center"
+          className="w-full h-full bg-center bg-white justify-center items-center"
         >
           <Routes>
             <Route path="/*" element={<MainContainer />} />
