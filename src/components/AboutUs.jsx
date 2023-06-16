@@ -24,7 +24,7 @@ const AboutUs = () => {
         <p className='text-white text-center text-base font-semibold'>Best choice</p>
         </div>
 
-        <p className='lg:text-[4.25rem] text-[2.5rem] font-bold tracking-wide text-mainColor mb-[20px] md:mb-[40px]'>The Fatest Delivery in <span className='text-logoColor text-[3rem] lg:text-[4.75rem]'>Your City</span></p>
+        <p className='lg:text-[4.0rem] text-[2.5rem] font-bold tracking-wide text-mainColor mb-[20px] md:mb-[30px]'>The Fatest Delivery in <span className='text-logoColor text-[3rem] lg:text-[4.5rem]'>Your City</span></p>
 
         <p className='text-base text-cardGray text-center md:text-left md:w-[80%]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit praesentium at temporibus mollitia quas qui numquam, adipisci commodi. Laudantium autem vero corporis quae. Impedit tempore quos blanditiis odio ullam error?
         </p>
@@ -35,7 +35,7 @@ const AboutUs = () => {
       </div>
 
       <div className='py-2 md:py-12 flex-1 flex items-center lg:justify-center relative'>
-          <div className='ml-auto p-2 md:p-6 bg-white w-full flex flex-col items-center justify-center
+          <div className='p-2 md:p-6 bg-white w-full flex flex-col items-center justify-center
           md:w-510 rounded-2xl ' style={{
           backdropFilter: 'blur(10px)',
           backgroundColor: 'rgba(90, 72, 72, 0.3)',

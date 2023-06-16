@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.14",
+    "dotenv": "^16.2.0",
     "firebase": "^9.22.0",
     "framer-motion": "^10.12.16",
     "postcss": "^8.4.23",

@@ -7,7 +7,7 @@ import NotFound from "../img/NotFound.svg";
 
 
 const RowContainer = ({flag, data, scrollValue}) => {
-  console.log(data)
+  // console.log(data)
 
   useEffect(() => {
 rowContainer.current.scrollLeft += scrollValue
