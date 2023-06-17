@@ -45,7 +45,7 @@ const HomeContainer = () => {
         <div className=' h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
         md:top-[100px]
         mdX:top-[380px]
-        mdXX:top-[130px]
+        mdXX:top-[100px]
         xxM:top-[200px]
         xxL:top-[450px]
         xxL:px-[300px]
