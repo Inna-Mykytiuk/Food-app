@@ -9,7 +9,7 @@ import HeroBg from '../img/44.jpg';
 
 const HomeContainer = () => {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4 drop-shadow-xl' id='home'
+    <section className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full md:min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4 drop-shadow-xl' id='home'
     style={{
             // width: '100%',
             backgroundImage: `url(${HeroBg})`,
@@ -43,11 +43,15 @@ const HomeContainer = () => {
 
         </div>
         <div className=' h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
-        md:top-[130px]
+        md:top-[100px]
+        mdX:top-[380px]
+        mdXX:top-[130px]
         xxM:top-[200px]
         xxL:top-[450px]
         xxL:px-[300px]
         lg:px-4
+        xl:px-[5rem]
+
         2xl:px-[13rem]
         py-2 gap-4 flex-wrap  ' >
           {heroData && heroData.map(n =>(
