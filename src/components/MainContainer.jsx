@@ -5,6 +5,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useStateValue } from 'context/StateProvider';
 import RowContainer from "./RowContainer";
 import MenuContainer from "./MenuContainer";
+import CartContainer from "./CartContainer";
 
 // import HeroBg from '../img/rw4.png';
 
@@ -59,6 +60,8 @@ const MainContainer = () => {
     </section>
 
     <MenuContainer/>
+
+    <CartContainer/>
     </div>
   );
 };

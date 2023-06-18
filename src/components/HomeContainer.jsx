@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Delivery from '../img/delivery.png'
 // import PosterBg from '../img/bg1.jpg'
 import { heroData } from '../utils/data'
@@ -55,16 +56,23 @@ const HomeContainer = () => {
         2xl:px-[13rem]
         py-2 gap-4 flex-wrap  ' >
           {heroData && heroData.map(n =>(
-            <div key={n.id} className=' xl:w-190 w-120 sm:w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0' style={{
+            <motion.div
+            whileHover={{scale: 1.1}}
+            key={n.id}
+            className=' xl:w-190 w-120 sm:w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0'
+            style={{
             backdropFilter: 'blur(10px)',
             // backgroundColor: 'rgba(90, 72, 72, 0.8)',
             boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px'
           }}>
-            <img src={n.imageSrc} alt="icecreame1" className='w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]'/>
+            <img
+            src={n.imageSrc}
+            alt="icecreame1"
+            className='w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]'/>
             <p className='text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4'>{n.name}</p>
             <p className='text-[12px] md:text-sm  text-mainTextGrey my-1 lg:my-4'>{n.description}</p>
             <p className='text-sm font-semibold text-white'>{n.price}</p>
-          </div>
+          </motion.div>
           ))}
         </div>
 
