@@ -17,7 +17,7 @@ const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user, cartShow }, dispatch] = useStateValue();
 
   const [isMenu, setIsMenu] = useState(false)
 
@@ -50,6 +50,13 @@ const Header = () => {
     });
   };
 
+  const showCart = () => {
+    dispatch({
+      type: actionType.SET_CART_SHOW,
+      cartShow: !cartShow,
+    });
+  }
+
   return (
     //p-3 px-4 md:p-5 md:px-16
     //md:p-5 md:px-16
@@ -80,7 +87,9 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center"
+          onClick={showCart}
+          >
             <RiShoppingBasketFill className="text-mainColor text-2xl cursor-pointer" />
             <div className="absolute -top-3 -right-3 flex items-center justify-center w-5 h-5 rounded-full bg-logoColor">
               <p className="text-white text-center text-xs font-semibold">0</p>
@@ -120,7 +129,9 @@ const Header = () => {
       {/*mobile*/}
       <div className="flex md:hidden w-full h-full justify-between items-center">
 
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center"
+      onClick={showCart}
+      >
             <RiShoppingBasketFill className="text-mainColor text-2xl cursor-pointer" />
             <div className="absolute -top-3 -right-3 flex items-center justify-center w-5 h-5 rounded-full bg-logoColor">
               <p className="text-white text-center text-xs font-semibold">0</p>

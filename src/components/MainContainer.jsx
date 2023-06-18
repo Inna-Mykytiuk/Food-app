@@ -18,10 +18,8 @@ const MainContainer = () => {
   useEffect(() => {}, [scrollValue, cartShow]);
 
   return (
-    <div className='w-full h-auto flex flex-col items-center justify-center
-    '
+    <div className='w-full h-auto flex flex-col items-center justify-center'>
 
-    >
     <HomeContainer/>
 
     <section className='w-full mt-17 p-6 px-10 mt-12  md:px-16 lg:px-20 py-4 relative
@@ -61,7 +59,7 @@ const MainContainer = () => {
 
     <MenuContainer/>
 
-    <CartContainer/>
+    {cartShow && <CartContainer />}
     </div>
   );
 };
