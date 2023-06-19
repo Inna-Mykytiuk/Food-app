@@ -26,9 +26,18 @@ const CartContainer = () => {
       return accumulator + item.qty * item.price;
     }, 0);
     setTot(totalPrice);
-    console.log(tot);
+    if (cartItems.length === 0) {
+      setTot(0);
+    }
+    // console.log(tot);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [tot, flag]);
+  }, [tot, flag, cartItems]);
+
+  // useEffect(() => {
+  //   if (cartItems.length === 0) {
+  //     setTot(0);
+  //   }
+  // }, [cartItems]);
 
   const clearCart = () => {
     dispatch({
