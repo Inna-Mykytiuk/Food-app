@@ -40,10 +40,7 @@ const HomeContainer = () => {
         </p>
 
         <p className="text-base text-mainTextGrey text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-          praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
-          Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
-          odio ullam error?
+        Experience the fastest delivery in your city with City, where great food meets unparalleled convenience. Your satisfaction is our utmost priority, and we look forward to serving you with our passion for exceptional food and service.
         </p>
 
         <button
