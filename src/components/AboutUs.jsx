@@ -22,14 +22,14 @@ const AboutUs = () => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="py-2 flex-1 flex flex-col items-start justify-start gap-6 mt-4 md:mt-20">
+      <div className="py-2 flex-1 flex flex-col items-start justify-start gap-6 mt-16 md:mt-36">
         <div className="flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full">
           <p className="text-white text-center text-base font-semibold">
             Best choice
           </p>
         </div>
 
-        <p className="lg:text-[4.0rem] text-[2.5rem] font-bold tracking-wide text-mainColor mb-[20px] md:mb-[30px]">
+        <p className="lg:text-[4.0rem] text-[2.5rem] font-bold tracking-wide text-mainColor mb-[20px] lg:mb-[30px]">
           The Fatest Delivery in{' '}
           <span className="text-logoColor text-[3rem] lg:text-[4.5rem]">
             Your City
@@ -40,20 +40,23 @@ const AboutUs = () => {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
           praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
           Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
-          odio ullam error?
-        </p>
-        <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+          odio ullam error?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
           praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
           Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
           odio ullam error?
         </p>
-        <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
+        {/* <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
           praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
           Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
           odio ullam error?
-        </p>
+        </p> */}
+        {/* <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+          praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
+          Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
+          odio ullam error?
+        </p> */}
       </div>
 
       <div className="py-2 md:py-12 flex-1 flex items-center lg:justify-center relative">
