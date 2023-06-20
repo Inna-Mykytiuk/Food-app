@@ -9,26 +9,36 @@ const RowContainer = ({ flag, data, scrollValue }) => {
   // console.log(data)
   const rowContainer = useRef();
 
-  const [items, setItems] = useState([]);
+  // const [items, setItems] = useState([]);
 
   const [{ cartItems }, dispatch] = useStateValue();
 
-  const addtocart = () => {
-    dispatch({
-      type: actionType.SET_CARTITEMS,
-      cartItems: items,
-    });
-    localStorage.setItem('cartItems', JSON.stringify(items));
+  const addOrUpdateCartItem = (newItem) => {
+    const existingItemIndex = cartItems.findIndex((item) => item.id === newItem.id);
+
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].qty += 1;
+      dispatch({
+        type: actionType.SET_CARTITEMS,
+        cartItems: updatedCartItems,
+      });
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    } else {
+      dispatch({
+        type: actionType.SET_CARTITEMS,
+        cartItems: [...cartItems, { ...newItem, qty: 1 }],
+      });
+      localStorage.setItem(
+        'cartItems',
+        JSON.stringify([...cartItems, { ...newItem, qty: 1 }])
+      );
+    }
   };
 
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
-
-  useEffect(() => {
-    addtocart();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items]);
 
   // const [isHovered, setIsHovered] = useState(false);
 
@@ -56,7 +66,9 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               />
               <motion.div
                 whileTap={{ scale: 0.75 }}
-                onClick={() => setItems([...cartItems, item])}
+                // onClick={() => setItems([...cartItems, item])}
+                onClick={() => addOrUpdateCartItem(item)}
+                // оnClick = {() => addItems(item)}
                 className="w-8 h-8 group rounded-full bg-logoColor flex items-center justify-center cursor-pointer"
                 // onMouseEnter={() => setIsHovered(true)}
                 // onMouseLeave={() => setIsHovered(false)}
