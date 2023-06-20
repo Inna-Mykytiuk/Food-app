@@ -3,6 +3,7 @@ import { RiShoppingBasketFill } from 'react-icons/ri';
 import { MdAdd, MdLogout } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import {Link as ReactLink} from 'react-scroll'
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { app } from '../firebase.config';
@@ -91,12 +92,13 @@ const Header = () => {
             >
               About us
             </Link>
-            <Link
-              to={'/'}
+            <ReactLink
+              // to={'/'}
+              to="menu" spy={true} smooth={true} offset={-80} duration={300}
               className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
             >
               Service
-            </Link>
+            </ReactLink>
           </motion.div>
 
           <div

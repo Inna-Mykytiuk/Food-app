@@ -17,6 +17,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
     "tailwind-scrollbar": "^3.0.4",
     "web-vitals": "^2.1.3"
   },

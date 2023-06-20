@@ -15,13 +15,13 @@ const MenuContainer = () => {
 
   return (
     <section
+      id='menu'
       className="w-full my-6 mb-0 p-6 px-10 md:mt-8 md:px-16 lg:px-20 py-4 drop-shadow-xl"
       style={{
         // width: '100%',
         backgroundImage: `url(${HeroBg})`,
         backgroundRepeat: 'no-repeat',
-        // backgroundPosition: 'bottom',
-        // backgroundSize: '100%'
+
         backgroundSize: 'cover',
       }}
     >
