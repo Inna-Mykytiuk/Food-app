@@ -1,4 +1,3 @@
-// import React, { useEffect, useRef, useState } from 'react';
 import React, { useEffect, useRef } from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
@@ -6,42 +5,35 @@ import NotFound from '../img/NotFound.svg';
 import { useStateValue } from 'context/StateProvider';
 import { actionType } from 'context/reducer';
 
+
 const RowContainer = ({ flag, data, scrollValue }) => {
-  // console.log(data)
+
   const rowContainer = useRef();
-
-  // const [items, setItems] = useState([]);
-
   const [{ cartItems }, dispatch] = useStateValue();
 
-  const addOrUpdateCartItem = (newItem) => {
-    const existingItemIndex = cartItems.findIndex((item) => item.id === newItem.id);
-
-    if (existingItemIndex !== -1) {
-      const updatedCartItems = [...cartItems];
-      updatedCartItems[existingItemIndex].qty += 1;
-      dispatch({
-        type: actionType.SET_CARTITEMS,
-        cartItems: updatedCartItems,
-      });
-      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+  const addItems = newItem => {
+    const itemIndex = cartItems.findIndex(({ id }) => newItem.id === id);
+    let updatedItems = [];
+    if (itemIndex === -1) {
+      updatedItems = [...cartItems, newItem];
     } else {
-      dispatch({
-        type: actionType.SET_CARTITEMS,
-        cartItems: [...cartItems, { ...newItem, qty: 1 }],
-      });
-      localStorage.setItem(
-        'cartItems',
-        JSON.stringify([...cartItems, { ...newItem, qty: 1 }])
-      );
+      const incrementedItem = {
+        ...cartItems[itemIndex],
+        qty: cartItems[itemIndex].qty + 1,
+      };
+      updatedItems = [...cartItems];
+      updatedItems.splice(itemIndex, 1, incrementedItem);
     }
+    dispatch({
+      type: actionType.SET_CARTITEMS,
+      cartItems: updatedItems,
+    });
+    localStorage.setItem('cartItems', JSON.stringify(updatedItems));
   };
 
   useEffect(() => {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
-
-  // const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
@@ -67,17 +59,12 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               />
               <motion.div
                 whileTap={{ scale: 0.75 }}
-                // onClick={() => setItems([...cartItems, item])}
-                onClick={() => addOrUpdateCartItem(item)}
-                // оnClick = {() => addItems(item)}
+                onClick={() => addItems(item)}
                 className="w-8 h-8 group rounded-full bg-logoColor flex items-center justify-center cursor-pointer"
-                // onMouseEnter={() => setIsHovered(true)}
-                // onMouseLeave={() => setIsHovered(false)}
               >
                 <RiShoppingBasketFill className={`text-2xl text-white `} />
               </motion.div>
             </div>
-
             <div className="w-full flex flex-col gap-2 items-end justify-end">
               <p className="text-white font-semibold text-base md:text-lg">
                 {item?.title}
@@ -104,7 +91,6 @@ const RowContainer = ({ flag, data, scrollValue }) => {
     </div>
   );
 };
-
 export default RowContainer;
 
 //before:content before:w-full before:h-1 color-white relative before:absolute
