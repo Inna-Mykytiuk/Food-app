@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+// import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { RiShoppingBasketFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import NotFound from '../img/NotFound.svg';
