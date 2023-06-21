@@ -40,18 +40,6 @@ const AboutUs = () => {
         Welcome to our food and fresh food delivery app, where we bring the ultimate convenience and speed to your dining experience. We take pride in being the go-to platform for delivering delectable meals and fresh produce straight to your doorstep, ensuring you never have to compromise on quality, taste, or time.
         Our mission is to revolutionize the way you enjoy food by offering the fastest delivery service in your city. We strive to eliminate the wait and deliver your favorite dishes and fresh ingredients to you promptly, so you can savor every bite without delay.
         </p>
-        {/* <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-          praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
-          Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
-          odio ullam error?
-        </p> */}
-        {/* <p className="text-base text-cardGray text-center md:text-left md:w-[80%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-          praesentium at temporibus mollitia quas qui numquam, adipisci commodi.
-          Laudantium autem vero corporis quae. Impedit tempore quos blanditiis
-          odio ullam error?
-        </p> */}
       </div>
 
       <div className="py-2 md:py-12 flex-1 flex items-center lg:justify-center relative">

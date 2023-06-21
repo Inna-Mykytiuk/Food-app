@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Delivery from '../img/delivery.png';
-// import PosterBg from '../img/bg1.jpg'
 import { heroData } from '../utils/data';
 
 import HeroBg from '../img/44.jpg';
@@ -12,7 +11,6 @@ const HomeContainer = () => {
       className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full md:min-h-screen h-auto mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4 drop-shadow-xl"
       id="home"
       style={{
-        // width: '100%',
         backgroundImage: `url(${HeroBg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -111,15 +109,3 @@ const HomeContainer = () => {
 
 export default HomeContainer;
 
-//{/* <div className='py-2 flex-1 overflow-hidden'>
-
-// {/* <img src={HeroBg} alt="hero-Bg" className='rounded-2xl'/>
-
-// </div> */}
-// {/* <div className='py-2 flex-1 overflow-hidden' style={{backgroundImage: 'url(../img/bg1.jpg)', width: '100%', height: '100%'}}>
-// </div> */}
-
-// {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${HeroBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}>Hello</div> */}
-// {/* <div className='py-2 flex-1  bg-cover bg-no-repeat w-full h-full' style={{backgroundImage: `url(${PosterBg}`,backgroundRepeat:"no-repeat", backgroundSize: "contain"}}></div> */}
-
-//h-370 lg:h-600 absolute flex top-4  md:top-[100px] lg:top-16 left-0 items-center justify-center py-2 gap-4 flex-wrap lg:px-32 xlL:px-9 2xl:px-44

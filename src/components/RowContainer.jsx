@@ -92,5 +92,3 @@ const RowContainer = ({ flag, data, scrollValue }) => {
   );
 };
 export default RowContainer;
-
-//before:content before:w-full before:h-1 color-white relative before:absolute

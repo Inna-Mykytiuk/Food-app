@@ -7,8 +7,6 @@ import RowContainer from './RowContainer';
 import MenuContainer from './MenuContainer';
 import CartContainer from './CartContainer';
 
-// import HeroBg from '../img/rw4.png';
-
 const MainContainer = () => {
   // eslint-disable-next-line no-unused-vars
   const [{ foodItems, cartShow }, dispatch] = useStateValue();
@@ -25,11 +23,6 @@ const MainContainer = () => {
     before:w-full before:h-[1px] before:left-0 before:top-0 before:bg-mainTextGrey before:content before:absolute
     after:w-full after:h-[1px] after:left-0 after:bottom-0 after:bg-mainTextGrey after:content after:absolute
     "
-        // style={{
-        //         backgroundImage: `url(${HeroBg})`,
-        //         backgroundRepeat: 'no-repeat',
-        //         backgroundSize: 'cover'
-        //       }}
       >
         <div className="w-full flex items-center justify-between">
           <p className="text-2xl mb-12 font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-mainColor transition-all ease-in-out duration-100">
@@ -68,4 +61,3 @@ const MainContainer = () => {
 };
 
 export default MainContainer;
-//className="bg-mainGray"

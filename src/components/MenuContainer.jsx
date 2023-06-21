@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import HeroBg from '../img/w5.jpg';
 import { useStateValue } from 'context/StateProvider';
 import { IoFastFood } from 'react-icons/io5';
 import { categories } from 'utils/data';

@@ -47,19 +47,5 @@ const App = () => {
 
 export default App;
 
-//className="mt-17 p-6 px-10 md:mt-20 md:px-16 lg:px-20 py-4 w-full h-full bg-center bg-mainGray justify-center items-center"
-
-// import HeroBg from './img/44.jpg';
-// import HeroSecondBg from './img/bg-4.jpg';
-// import { Route, Routes, useLocation } from 'react-router-dom';
-
-
-
-//          // style={{
-          //   backgroundImage: `url(${backgroundImage})`,
-          //   backgroundRepeat: 'no-repeat',
-          //   backgroundSize: 'cover'
-          // }}
-
 
 

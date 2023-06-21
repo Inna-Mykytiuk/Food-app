@@ -33,11 +33,6 @@ const CartContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tot, flag, cartItems]);
 
-  // useEffect(() => {
-  //   if (cartItems.length === 0) {
-  //     setTot(0);
-  //   }
-  // }, [cartItems]);
 
   const clearCart = () => {
     dispatch({
