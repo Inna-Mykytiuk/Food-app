@@ -16,8 +16,8 @@ const HomeContainer = () => {
         backgroundSize: 'cover',
       }}
     >
-      {/* <div className='flex flex-col w-full h-full items-center justify-between px-4 md:px-0 max-w-6xl mx-auto'> */}
-      <div className="w-full md:min-h-screen h-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 p-6 px-10 mt-17 md:mt-20 md:px-16 lg:px-20 py-4 ">
+      <div className='flex flex-col w-full h-full items-center justify-between px-4 md:px-0 max-w-7xl mx-auto'>
+      <div className="w-full md:min-h-screen h-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 p-6 px-10 mt-20 md:px-16 py-4 ">
         <div className="py-2 flex-1 flex flex-col items-start justify-center gap-6">
           <div className="flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full">
             <p className="text-white text-center text-base font-semibold">
@@ -68,16 +68,9 @@ const HomeContainer = () => {
           ></div>
           <div
             className=" h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
-        md:top-[100px]
-        mdX:top-[380px]
-        mdXX:top-[100px]
-        xxM:top-[200px]
-        xxL:top-[450px]
-        xxL:px-[300px]
-        lg:px-4
-        xl:px-[5rem]
+        md:top-[120px]
+        xl:top-[180px]
 
-        2xl:px-[13rem]
         py-2 gap-4 flex-wrap  "
           >
             {heroData &&
@@ -109,9 +102,23 @@ const HomeContainer = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
+      </div>
     </section>
   );
 };
 
 export default HomeContainer;
+
+//className=" h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
+// md:top-[100px]
+// mdX:top-[380px]
+// mdXX:top-[100px]
+// xxM:top-[200px]
+// xxL:top-[450px]
+// xxL:px-[300px]
+// lg:px-4
+// xl:px-[5rem]
+
+// 2xl:px-[13rem]
+
+// py-2 gap-4 flex-wrap
