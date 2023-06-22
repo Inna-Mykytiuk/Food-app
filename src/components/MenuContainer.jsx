@@ -24,12 +24,14 @@ const MenuContainer = () => {
         backgroundSize: 'cover',
       }}
     >
-      <div className="flex flex-col items-center justify-center">
+
+    <div className='flex flex-col w-full h-full justify-between px-4 md:px-0 max-w-6xl mx-auto'>
+    <div className="flex flex-col items-center justify-center">
         <p className="text-2xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2 before:left-0 before:bg-gradient-to-br from-hoverColor to-logoColor text-white transition-all ease-in-out duration-100 mr-auto">
           Our Hot <span className="text-logoColor">Dishes</span>
         </p>
 
-        <div className="w-full flex items-center justify-start lg:justify-center gap-8 mt-12 mb-12 overflow-x-scroll scrollbar-none">
+        <div className="w-full flex items-center justify-start lg:justify-center gap-6 mt-12 mb-12 overflow-x-scroll scrollbar-none">
           {categories &&
             categories.map(category => (
               <motion.div
@@ -75,6 +77,10 @@ const MenuContainer = () => {
           />
         </div>
       </div>
+
+    </div>
+
+
     </section>
   );
 };
