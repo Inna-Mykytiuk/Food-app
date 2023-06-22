@@ -58,14 +58,12 @@ const Header = () => {
   };
 
   return (
-    //p-3 px-4 md:p-5 md:px-16
-    //md:p-5 md:px-16
     <header
       className="fixed z-50 w-screen p-3 px-10  md:px-16 lg:px-20 shadow-lg bg-headerBgColor"
       style={{ boxShadow: '0 2px 6px 0 grey' }}
     >
       {/*desctop and tablet*/}
-      <div className="hidden md:flex w-full h-full items-center justify-between ">
+      <div className="hidden md:flex w-full h-full items-center justify-between px-4 md:px-0 max-w-6xl mx-auto">
         <Link to={'/'} className="flex items-center gap-2 drop-shadow-lg">
           <img src={Logo} alt="logo" className="w-14 object-cover" />
           <p className="text-mainColor text-lg font-bold">City</p>
@@ -154,6 +152,7 @@ const Header = () => {
             )}
           </div>
         </div>
+
       </div>
 
       {/*mobile*/}
@@ -241,7 +240,9 @@ const Header = () => {
           )}
         </div>
       </div>
+
     </header>
+
   );
 };
 

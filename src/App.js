@@ -30,7 +30,7 @@ const App = () => {
   return (
     <AnimatePresence>
       <div className="w-screen h-auto flex flex-col bg-primary">
-        <Header />
+      <Header />
         <main
           className="w-full h-full bg-center bg-white justify-center items-center"
         >
@@ -43,6 +43,7 @@ const App = () => {
 
         <Footer />
       </div>
+
     </AnimatePresence>
   );
 };
