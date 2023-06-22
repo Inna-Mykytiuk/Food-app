@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Header, CreateContainer, MainContainer, AboutUs } from 'components';
+import { Header, CreateContainer, MainContainer, AboutUs, Footer } from 'components';
 
 import { Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -40,6 +40,8 @@ const App = () => {
             <Route path="/aboutUs" element={<AboutUs/>} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </AnimatePresence>
   );
