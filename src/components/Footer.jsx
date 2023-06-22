@@ -29,9 +29,9 @@ const Footer = () => {
             <p className='text-base md:text-lg text-mainColor px-2 group-hover:text-logoColor'>innka-pinnka@ukr.net</p>
           </div>
           <div className='w-full flex items-center justify-center gap-4 py-2'>
-            <BsLinkedin  className="text-base md:text-lg text-mainColor hover:text-white duration-100 transition-all ease-in-out cursor-pointer hover:bg-hoverColor"/>
-            <BsFacebook  className="text-base md:text-lg text-mainColor cursor-pointer"/>
-            <BsInstagram  className="text-base md:text-lg text-mainColor cursor-pointer"/>
+            <BsLinkedin  className="text-lg text-mainColor hover:text-logoColor duration-100 transition-all ease-in-out cursor-pointer"/>
+            <BsFacebook  className="text-lg text-mainColor hover:text-logoColor duration-100 transition-all ease-in-out cursor-pointer"/>
+            <BsInstagram  className="text-lg text-mainColor hover:text-logoColor duration-100 transition-all ease-in-out cursor-pointer"/>
           </div>
 
         </div>
