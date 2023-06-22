@@ -5,9 +5,7 @@ import NotFound from '../img/NotFound.svg';
 import { useStateValue } from 'context/StateProvider';
 import { actionType } from 'context/reducer';
 
-
 const RowContainer = ({ flag, data, scrollValue }) => {
-
   const rowContainer = useRef();
   const [{ cartItems }, dispatch] = useStateValue();
 
@@ -48,7 +46,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
         data.map(item => (
           <div
             key={item?.id}
-            className="min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-8 lg:mt-10 mb-4 lg:mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg"
+            className="min-w-[220px] w-275 h-[225px] md:w-300 md:min-w-[300px] backdrop-blur-xl mt-10 lg:mt-[3rem] mb-4 lg:mb-12 border-none rounded-lg p-4 cursor-pointer flex flex-col items-center justify-between bg-itemBg"
           >
             <div className="w-full flex items-center justify-between ">
               <motion.img

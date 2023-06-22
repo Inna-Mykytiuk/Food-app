@@ -13,6 +13,8 @@ const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
   const [flag, setFlag] = useState(1);
   const [tot, setTot] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [checkoutMessage, setCheckoutMessage] = useState('');
 
   const showCart = () => {
     dispatch({
@@ -33,7 +35,6 @@ const CartContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tot, flag, cartItems]);
 
-
   const clearCart = () => {
     dispatch({
       type: actionType.SET_CARTITEMS,
@@ -41,6 +42,11 @@ const CartContainer = () => {
     });
 
     localStorage.setItem('cartItems', JSON.stringify([]));
+  };
+
+  const handleCheckout = () => {
+    clearCart();
+    setCheckoutMessage('Thank you for your order!');
   };
 
   return (
@@ -82,7 +88,7 @@ const CartContainer = () => {
           </div>
 
           {/* cart total section */}
-          <div className="w-full flex-1 bg-white rounded-t-[2rem] flex flex-col items-center justify-evenly px-8 py-2 gap-4">
+          <div className="w-full flex-1 bg-white rounded-t-[2rem] flex flex-col items-center  p-8 gap-6">
             <div className="w-full flex items-center justify-between">
               <p className="text-mainColor text-lg">Sub Total</p>
               <p className="text-mainColor text-lg">$ {tot.toFixed(2)}</p>
@@ -105,6 +111,7 @@ const CartContainer = () => {
               <motion.button
                 whileTap={{ scale: 0.8 }}
                 type="button"
+                onClick={handleCheckout}
                 className="w-full p-2 rounded-full  bg-logoColor text-gray-50 text-lg my-2 hover:shadow-lg"
               >
                 Check Out
@@ -113,6 +120,7 @@ const CartContainer = () => {
               <motion.button
                 whileTap={{ scale: 0.8 }}
                 type="button"
+                onClick={handleCheckout}
                 className="w-full p-2 rounded-full  bg-logoColor text-gray-50 text-lg my-2 hover:shadow-lg"
               >
                 Login to check out
@@ -123,9 +131,15 @@ const CartContainer = () => {
       ) : (
         <div className="w-full h-full flex flex-col items-center justify-center gap-6">
           <img src={EmptyCart} className="w-300" alt="" />
-          <p className="text-xl text-logoColor font-semibold">
-            Add some items to your cart
-          </p>
+          {checkoutMessage ? (
+            <p className="text-xl text-logoColor font-semibold">
+              {checkoutMessage}
+            </p>
+          ) : (
+            <p className="text-xl text-logoColor font-semibold">
+              Add some items to your cart
+            </p>
+          )}
         </div>
       )}
     </motion.div>

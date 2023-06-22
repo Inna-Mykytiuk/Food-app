@@ -91,4 +91,3 @@ const CartItem = ({ item, setFlag, flag }) => {
 };
 
 export default CartItem;
-
