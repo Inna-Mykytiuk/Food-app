@@ -13,9 +13,9 @@ const Footer = () => {
     <div className="w-full h-auto flex flex-col items-center justify-center">
       <section
         className="w-full p-6 px-10 mt-8 mb-8 md:px-16 lg:px-20 py-4 relative
-    before:w-full before:h-[1px] before:left-0 before:top-0 before:bg-mainTextGrey before:content before:absolute
-    after:w-full after:h-[1px] after:left-0 after:bottom-0 after:bg-mainTextGrey after:content after:absolute
-    "
+        before:w-full before:h-[1px] before:left-0 before:top-0 before:bg-mainTextGrey before:content before:absolute
+        after:w-full after:h-[1px] after:left-0 after:bottom-0 after:bg-mainTextGrey after:content after:absolute
+        "
       >
         <div className="flex flex-col w-full h-full items-center justify-between px-4 md:px-0 max-w-6xl mx-auto">
           <div className="w-full flex items-center justify-center">
@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full flex-col flex md:flex-row items-center justify-between mb-10">
+          <div className="w-full flex-col flex lg:flex-row items-center justify-between mb-10">
             <div className="w-full flex items-center justify-center group cursor-pointer py-2">
               <BsFillTelephoneInboundFill className="text-base md:text-lg text-mainColor group-hover:text-logoColor" />
               <p className="text-base md:text-lg text-mainColor px-2 group-hover:text-logoColor">

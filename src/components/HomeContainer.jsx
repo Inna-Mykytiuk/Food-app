@@ -68,17 +68,17 @@ const HomeContainer = () => {
             ></div>
             <div
               className=" h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
-        md:top-[120px]
+        md:top-[180px]
         xl:top-[180px]
 
-        py-2 gap-4 flex-wrap  "
+        py-2 gap-2 md:gap-4 flex-wrap  "
             >
               {heroData &&
                 heroData.map(n => (
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     key={n.id}
-                    className=" xl:w-190 w-120 sm:w-170 p-1 md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0"
+                    className=" xl:w-190 w-120 sm:w-150 p-[3px] md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0 text-center"
                     style={{
                       backdropFilter: 'blur(10px)',
                       // backgroundColor: 'rgba(90, 72, 72, 0.8)',
@@ -93,7 +93,7 @@ const HomeContainer = () => {
                     <p className="text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4">
                       {n.name}
                     </p>
-                    <p className="text-[12px] md:text-sm  text-mainTextGrey my-1 lg:my-4">
+                    <p className="text-[11px] md:text-[14px]  text-mainTextGrey my-1 lg:my-4">
                       {n.description}
                     </p>
                     <p className="text-sm font-semibold text-white">
