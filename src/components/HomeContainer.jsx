@@ -58,49 +58,49 @@ const HomeContainer = () => {
           <div className="py-2 md:py-12 flex-1 flex items-center lg:justify-center relative">
             {/* <img src={PosterBg} alt="hero-Bg" className='rounded-2xl'/> */}
             <div
-              className="ml-auto h-420  lg:h-600 bg-white w-full
+              className="ml-auto h-370 md:h-510 lg:h-600 items-center justify-center bg-white w-full
           md:w-510 rounded-2xl "
               style={{
                 backdropFilter: 'blur(10px)',
                 backgroundColor: 'rgba(90, 72, 72, 0.3)',
                 boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
               }}
-            ></div>
-            <div
-              className=" h-370 lg:h-600 absolute flex top-4  left-0 items-center justify-center
-        md:top-[180px]
-        xl:top-[180px]
-
-        py-2 gap-2 md:gap-4 flex-wrap  "
             >
-              {heroData &&
-                heroData.map(n => (
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    key={n.id}
-                    className=" xl:w-190 w-120 sm:w-150 p-[3px] md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0 text-center"
-                    style={{
-                      backdropFilter: 'blur(10px)',
-                      // backgroundColor: 'rgba(90, 72, 72, 0.8)',
-                      boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
-                    }}
-                  >
-                    <img
-                      src={n.imageSrc}
-                      alt="icecreame1"
-                      className="w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]"
-                    />
-                    <p className="text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4">
-                      {n.name}
-                    </p>
-                    <p className="text-[11px] md:text-[14px]  text-mainTextGrey my-1 lg:my-4">
-                      {n.description}
-                    </p>
-                    <p className="text-sm font-semibold text-white">
-                      {n.price}
-                    </p>
-                  </motion.div>
-                ))}
+              <div
+                className=" h-370 md:h-510 lg:h-600 flex top-4  left-0 items-center justify-center
+
+
+              py-2 gap-2 md:gap-4 flex-wrap "
+              >
+                {heroData &&
+                  heroData.map(n => (
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      key={n.id}
+                      className=" xl:w-190 w-120 sm:w-150 p-[3px] md:p-4 bg-itemBg rounded-3xl flex flex-col items-center justify-center mt-8 md:mt-10 lg:mt-0 text-center"
+                      style={{
+                        backdropFilter: 'blur(10px)',
+                        // backgroundColor: 'rgba(90, 72, 72, 0.8)',
+                        boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
+                      }}
+                    >
+                      <img
+                        src={n.imageSrc}
+                        alt="icecreame1"
+                        className="w-24 md:w-40 -mt-10 md:-mt-20 xl:w-[180px]"
+                      />
+                      <p className="text-base lg:text-xl font-semibold text-white mt-1 lg:mt-4">
+                        {n.name}
+                      </p>
+                      <p className="text-[11px] md:text-[14px]  text-mainTextGrey my-1 lg:my-4">
+                        {n.description}
+                      </p>
+                      <p className="text-sm font-semibold text-white">
+                        {n.price}
+                      </p>
+                    </motion.div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
