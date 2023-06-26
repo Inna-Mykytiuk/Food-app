@@ -57,9 +57,10 @@ const CreateContainer = () => {
     uploadTask.on(
       'state_changed',
       snapshot => {
+        // eslint-disable-next-line no-unused-vars
         const uploadProgress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(uploadProgress);
+        // console.log(uploadProgress);
       },
       error => {
         console.log(error);

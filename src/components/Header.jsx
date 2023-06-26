@@ -3,7 +3,7 @@ import { RiShoppingBasketFill } from 'react-icons/ri';
 import { MdAdd, MdLogout } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import {Link as ReactLink} from 'react-scroll'
+import { Link as ReactLink } from 'react-scroll';
 
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { app } from '../firebase.config';
@@ -88,18 +88,19 @@ const Header = () => {
             >
               About us
             </Link>
-            {location.pathname !== '/aboutUs' && (
-        <ReactLink
-          to="menu"
-          spy={true}
-          smooth={true}
-          offset={-30}
-          duration={300}
-          className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-        >
-          Menu
-        </ReactLink>
-      )}
+            {location.pathname !== '/aboutUs' &&
+              location.pathname !== '/createItem' && (
+                <ReactLink
+                  to="menu"
+                  spy={true}
+                  smooth={true}
+                  offset={-30}
+                  duration={300}
+                  className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
+                >
+                  Menu
+                </ReactLink>
+              )}
           </motion.div>
 
           <div
@@ -152,7 +153,6 @@ const Header = () => {
             )}
           </div>
         </div>
-
       </div>
 
       {/*mobile*/}
@@ -217,18 +217,19 @@ const Header = () => {
                 >
                   About us
                 </Link>
-                {location.pathname !== '/aboutUs' && (
-        <ReactLink
-          to="menu"
-          spy={true}
-          smooth={true}
-          offset={-30}
-          duration={300}
-          className="text-base text-mainColor px-4 py-2 hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-        >
-          Menu
-        </ReactLink>
-      )}
+                {location.pathname !== '/aboutUs' &&
+                  location.pathname !== '/createItem' && (
+                    <ReactLink
+                      to="menu"
+                      spy={true}
+                      smooth={true}
+                      offset={-30}
+                      duration={300}
+                      className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
+                    >
+                      Menu
+                    </ReactLink>
+                  )}
               </div>
               <p
                 className="text-mainTextColor rounded-md shadow-md m-2 p-2 flex items-center justify-center bg-gray-200 cursor-pointer hover:bg-hoverColor hover:text-white transition-all duration-100 ease-in-out text-base"
@@ -240,9 +241,7 @@ const Header = () => {
           )}
         </div>
       </div>
-
     </header>
-
   );
 };
 
