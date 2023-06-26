@@ -225,7 +225,7 @@ const Header = () => {
                       smooth={true}
                       offset={-30}
                       duration={300}
-                      className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
+                      className="text-base text-mainColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer px-4 py-2"
                     >
                       Menu
                     </ReactLink>
