@@ -24,7 +24,7 @@ const AboutUs = () => {
     >
       <div className="flex flex-col w-full h-full items-center justify-between px-4 md:px-0 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-2 w-full min-h-screen h-auto mt-17 md:mt-[30px] p-6 px-10 md:px-16 py-4">
-          <div className="py-2 flex-1 flex flex-col items-start justify-start gap-6 mt-16 md:mt-18">
+          <div className="py-2 flex-1 flex flex-col items-start justify-start xl:justify-center gap-6 mt-16 md:mt-18 xl:mt-0">
             <div className="flex items-center gap-2 justify-center bg-logoColor px-4 py-1 rounded-full">
               <p className="text-white text-center text-base font-semibold">
                 Best choice
@@ -55,10 +55,10 @@ const AboutUs = () => {
             <div
               className="p-2 md:p-6 w-full flex flex-col items-center justify-center md:w-510 rounded-2xl backdrop-filter backdrop-blur-md"
               style={{
-            backdropFilter: 'blur(10px)',
-            backgroundColor: 'rgba(90, 72, 72, 0.3)',
-            boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
-          }}
+                backdropFilter: 'blur(10px)',
+                backgroundColor: 'rgba(90, 72, 72, 0.3)',
+                boxShadow: 'rgba(0, 0, 0, 0.5) 0px 5px 15px',
+              }}
             >
               <p className="text-base text-white text-center md:text-left md:w-[80%]">
                 Our commitment to speed goes hand in hand with our dedication to
